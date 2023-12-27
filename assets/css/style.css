@@ -241,6 +241,33 @@ body {
 .link\:hover:is(:hover, :focus-visible) {
   color: var(--blue-violet);
 }
+.section {
+  padding-block: var(--section-padding);
+}
+.btn {
+  background-color: var(--blue-violet);
+  color: var(--white);
+  width: max-content;
+  font-size: var(--body-md);
+  font-weight: var(--fw-600);
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-1);
+  -webkit-border-radius: var(--radius-pill);
+  -moz-border-radius: var(--radius-pill);
+  -ms-border-radius: var(--radius-pill);
+  -o-border-radius: var(--radius-pill);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+}
+.btn:is(:hover, :focus-visible) {
+  background-color: var(--electric-indigo);
+}
 
 /*-----------------------------------*\
   #HEADER
@@ -256,7 +283,7 @@ body {
   background-color: var(--oxford-blue-2);
   box-shadow: var(--shadow-1);
   padding-block: 16px;
-  z-index: 4px;
+  z-index: 4;
 }
 .header.active {
   position: fixed;
@@ -329,6 +356,26 @@ body {
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
+.hero {
+  position: relative;
+  --section-padding: 150px 64px;
+  text-align: center;
+}
+.hero-title .span {
+  display: inline;
+  background-image: var(--linear-gradient-2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero .section-text {
+  color: var(--white);
+  opacity: 0.7;
+  margin-block: 16px 32px;
+}
+.hero .btn {
+  margin-inline: auto;
+}
 
 /*-----------------------------------*\
   #TOP COLLECTION
