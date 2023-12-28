@@ -1,6 +1,6 @@
 "use strict";
 
-// Navbar Toggler For Mobile
+// ? Navbar Toggler For Mobile
 const navbar = document.querySelector("[data-navbar]");
 const navToggler = document.querySelector("[data-nav-toggler]");
 
@@ -9,7 +9,7 @@ navToggler.addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
-// Header
+// ? Header
 // Header visible when window scroll down to 180px
 const header = document.querySelector("[data-header]");
 const activeElementOnScroll = function () {
@@ -18,7 +18,7 @@ const activeElementOnScroll = function () {
 
 window.addEventListener("scroll", activeElementOnScroll);
 
-// Slider
+// ? Slider
 const sliders = document.querySelectorAll("[data-slider]");
 
 const sliderInit = function (slider) {
@@ -91,3 +91,35 @@ const sliderInit = function (slider) {
 
 // Initialize each slider
 sliders.forEach(sliderInit);
+
+// ? Accordion
+// Initialize accordion functionality
+function initializeAccordion() {
+  const accordions = document.querySelectorAll("[data-accordion]");
+  let lastActiveAccordion = null;
+
+  accordions.forEach((accordion) => {
+    const accordionBtn = accordion.querySelector("[data-accordion-btn]");
+
+    accordionBtn.addEventListener("click", () => toggleAccordion(accordion));
+  });
+
+  // Toggle accordion and manage active state
+  function toggleAccordion(currentAccordion) {
+    // If the current accordion is already active, close it
+    if (currentAccordion === lastActiveAccordion) {
+      currentAccordion.classList.toggle("active");
+      lastActiveAccordion = null;
+    } else {
+      // Close the last active accordion if there is one
+      if (lastActiveAccordion) lastActiveAccordion.classList.remove("active");
+      
+      // Open the current accordion
+      currentAccordion.classList.add("active");
+      lastActiveAccordion = currentAccordion;
+    }
+  }
+}
+
+// Activate the accordion functionality
+initializeAccordion();

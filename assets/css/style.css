@@ -710,6 +710,51 @@ body {
 /*-----------------------------------*\
   #QNA
 \*-----------------------------------*/
+.qna .section-title {margin-block-end: 16px;}
+.qna-list {
+  margin-block-start: 60px;
+  display: grid;
+  gap: 16px;
+}
+.qna-card {
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  border-radius: var(--radius-6);
+  -webkit-border-radius: var(--radius-6);
+  -moz-border-radius: var(--radius-6);
+  -ms-border-radius: var(--radius-6);
+  -o-border-radius: var(--radius-6);
+}
+.qna-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  padding: 20px;
+}
+.qna-btn ion-icon {
+  flex-shrink: 0;
+}
+.qna-card.active .qna-btn {
+  background-color: var(--gunmetal);
+}
+.qna-card.active .qna-btn > * {
+  color: var(--blue-violet);
+}
+.qna-card.active .qna-btn ion-icon {
+  transform: rotate(0.5turn);
+  -webkit-transform: rotate(0.5turn);
+  -moz-transform: rotate(0.5turn);
+  -ms-transform: rotate(0.5turn);
+  -o-transform: rotate(0.5turn);
+}
+.qna-content .body-md {
+  padding: 20px;
+}
+.qna-content {display: none;}
+.qna-card.active .qna-content { display: block;}
 
 /*-----------------------------------*\
   #CONTACT
