@@ -9,11 +9,14 @@ navToggler.addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
-// ? Header
+// ? Header && Back to top
 // Header visible when window scroll down to 180px
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
+
 const activeElementOnScroll = function () {
   header.classList[this.window.scrollY >= 180 ? "add" : "remove"]("active");
+  backTopBtn.classList[this.window.scrollY >= 400 ? "add" : "remove"]("active");
 };
 
 window.addEventListener("scroll", activeElementOnScroll);
@@ -113,7 +116,7 @@ function initializeAccordion() {
     } else {
       // Close the last active accordion if there is one
       if (lastActiveAccordion) lastActiveAccordion.classList.remove("active");
-      
+
       // Open the current accordion
       currentAccordion.classList.add("active");
       lastActiveAccordion = currentAccordion;
