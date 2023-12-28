@@ -269,7 +269,7 @@ body {
   background-color: var(--electric-indigo);
 }
 .text-center {
-  align-items: center;
+  text-align: center;
 }
 .section-title {
   margin-block-end: 44px;
@@ -661,6 +661,51 @@ body {
 /*-----------------------------------*\
   #SELLERS
 \*-----------------------------------*/
+.seller-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+}
+.seller-card .card-banner {
+  position: relative;
+  background-color: var(--oxford-blue);
+}
+.seller-card .card-banner img {
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+.seller-card .card-banner ion-icon {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  font-size: 2rem;
+  color: var(--green-cyan);
+}
+.seller-card .user-name {margin-block-start: 2px;}
+.seller-card .btn-icon {
+  flex-shrink: 0;
+  margin-inline-start: auto;
+  border: 1px solid var(--blue-violet_a10);
+  background-color: var(--bg ,var(--blue-violet_a5));
+  color: var(--color, var(--blue-violet));
+  transition: var(--transition-1);
+  -webkit-transition: var(--transition-1);
+  -moz-transition: var(--transition-1);
+  -ms-transition: var(--transition-1);
+  -o-transition: var(--transition-1);
+}
+.seller-card .btn-icon ion-icon {
+  color: var(--color);
+  --ionicon-stroke-width: 55px;
+}
+.seller-card .btn-icon:is(:hover, :focus-visible) {
+  --bg: var(--blue-violet);
+  --color: var(--white);
+}
 
 /*-----------------------------------*\
   #QNA
