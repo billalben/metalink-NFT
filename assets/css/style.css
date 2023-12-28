@@ -759,6 +759,11 @@ body {
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/
+.contact .section-title {margin-block-end: 16px;}
+.contact .btn {
+  margin-inline: auto;
+  margin-block-start: 24px;
+}
 
 /*-----------------------------------*\
   #NEWSLETTER
