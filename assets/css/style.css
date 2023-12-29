@@ -852,7 +852,7 @@ body {
   background-color: var(--oxford-blue);
 }
 .footer-top {
-  margin-block-start: calc(var(--section-padding) + 200px);
+  padding-block-start: calc(var(--section-padding) + 200px);
   border-block-end: 1px solid var(--white_a10);
 }
 .footer-top .container {
@@ -1050,5 +1050,71 @@ body {
   }
   .footer-brand {
     padding-inline-end: 40px;
+  }
+}
+
+/* ! responsive for large than 992px screen */
+@media (min-width: 992px) {
+  /* Custom Property */
+  :root {
+    --headline-lg: 6rem;
+  }
+
+  /* Reused Style */
+  .container,
+  .header .container {
+    max-width: 950px;
+  }
+  .grid-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Header */
+  .header {
+    background: none;
+    box-shadow: none;
+  }
+  .header.active {
+    background-color: var(--oxford-blue-2);
+    box-shadow: var(--shadow-1);
+  }
+  .nav-toggle-btn {
+    display: none;
+  }
+  .header-action {
+    gap: 12px;
+  }
+  .navbar,
+  .navbar.active {
+    all: unset;
+    display: block;
+    margin-inline: auto 24px;
+  }
+  .navbar-list {
+    display: flex;
+    gap: 12px;
+  }
+
+  /* Top Collection */
+  .top-collection .slider {
+    --slider-item: 3;
+  }
+
+  /* QnA */
+  .qna .container {
+    max-width: 55%;
+  }
+
+  /* Newsletter */
+  .newsletter-card {
+    padding-inline: 32px;
+  }
+  .newsletter .bg-icon {
+    font-size: 12rem;
+  }
+
+  /* Footer */
+  .footer .container {
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.8fr;
   }
 }
