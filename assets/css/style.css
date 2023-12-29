@@ -1118,3 +1118,31 @@ body {
     grid-template-columns: 1fr 0.5fr 0.5fr 0.8fr;
   }
 }
+
+/* ! responsive for large than 1200px screen */
+@media (min-width: 1200px) {
+  /* Custom Property */
+  :root {
+    --section-padding: 56px;
+  }
+
+  /* Reused Style */
+  .container,
+  .header .container {
+    max-width: 1120px;
+  }
+
+  /* Top Collection */
+  .top-collection .slider {
+    --slider-item: 4;
+  }
+  .slider-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Discover */
+  .discover .grid-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
