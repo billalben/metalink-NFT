@@ -894,9 +894,10 @@ body {
   padding-block: 30px;
   color: var(--light-gray);
 }
-.copyright .span {
+.copyright :is(.span, a) {
   display: inline;
   color: var(--maximum-red);
+  font-weight: var(--fw-600);
 }
 
 /*-----------------------------------*\
