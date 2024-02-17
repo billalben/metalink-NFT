@@ -4,7 +4,7 @@
 
 This project is a responsive landing page for a Metalink NFT website, designed with a mobile-first approach using HTML, CSS, and JavaScript. The goal was to create an intuitive and visually appealing interface that showcases top NFT collections.
 
-<a href="https://billalben.github.io/Metalink-NFT-Website/"><strong>➥ Live Demo</strong></a>
+<a href="https://billalben.github.io/metalink-NFT/"><strong>➥ Live Demo</strong></a>
 
 <!-- ### Demo Screenshots
 ![MetaLink Website Demo]() -->
