@@ -899,6 +899,9 @@ body {
   color: var(--maximum-red);
   font-weight: var(--fw-600);
 }
+.current-yr-cp {
+  display: inline-block;
+}
 
 /*-----------------------------------*\
   #BACK TO TOP

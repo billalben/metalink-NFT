@@ -126,3 +126,6 @@ function initializeAccordion() {
 
 // Activate the accordion functionality
 initializeAccordion();
+
+// dynamic year copyright
+document.querySelector(".current-yr-cp").textContent = new Date().getFullYear();
